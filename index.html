@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" author = "Rohan Rajput">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Movie Maniac</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-social.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigations</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="41">
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a>
+                    </li>
+                    <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> About</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-list-alt"></span> Browse More
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Top 10 movies</a>
+                            </li>
+                            <li><a href="#">Top 10 Series</a>
+                            </li>
+                            <li><a href="#">Science</a>
+                            </li>
+                            <li><a href="#">Fantacy</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">Specials</li>
+                            <li><a href="#">Latest</a>
+                            </li>
+                            <li><a href="#">Classic</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i> Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="login-link" href="#">
+                            <span class="glyphicon glyphicon-log-in"></span> Sign In
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="login-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Sign In </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Email">
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input id="remember-me" type="checkbox" class="form-control" name="rememberme" value="">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-info">Sign In</button>
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reservation-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h3 class="modal-title">Book Tickets </h3>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-xs-12 col-sm-2">
+                                <label for="num-guests">Number of Tickets</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-10">
+                                <label class="radio-inline">
+                                    <input type="radio" id="num-guests" name="num-guests" value="1"> 1
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="num-guests" value="2"> 2
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="num-guests" value="3"> 3
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="num-guests" value="4"> 4
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="num-guests" value="5"> 5
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="num-guests" value="6"> 6
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-12 col-sm-2">
+                                <label>Date and Time</label>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <label class="sr-only" for="date">Date</label>
+                                <div class="form-group has-feedback">
+                                    <!-- Either you choose type="date" without the "Date" placeholder being shown in Chrome
+                                    or you choose type="text" with the placeholder being displayed but without date browser support.
+                                    I chose type="date" here. -->
+                                    <input type="date" class="form-control" name="date" id="date" placeholder="Date">
+                                    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-1">
+
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <label class="sr-only" for="time">Date</label>
+                                <div class="form-group has-feedback">
+
+                                    <input type="time" class="form-control" name="time" id="time" placeholder="Time">
+                                    <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-1">
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-10 col-sm-offset-2">
+                                <button type="submit" class="btn btn-primary">Book Now</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="jumbotron">
+
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-xs-12 col-sm-8">
+                    <h1>Movie Maniac</h1>
+                    <p style="padding:40px;"></p>
+                    <p>We provide details of IMDB website data, and provide list for Rated-R or family films.</p>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <p style="padding:20px;"></p>
+                    <img src="img/logo.png" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <p style="padding:40px;"></p>
+                    <a id="reservation-link" type="button" class="btn btn-warning btn-block" href="#">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row row-content">
+            <div class="col-xs-12">
+
+            </div>
+            <div class="row">
+                <div>
+                    <ol class="breadcrumb">
+                        <li class="active">Search Movie</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="row row-content">
+                <div id="wrapper">
+
+
+                    <div class="tools">
+
+                        <input type="text" id="searchBox" placeholder="Find Movies and ratings" />
+                        </br>
+                        Click here to sort:
+
+                        <div id="filters"></div>
+                        <h5 align="center">Search Per Page</h5>
+                        <div align="center" id="count"></div>
+
+                        <h3 align="center">Click item to get detail</h3>
+
+                    </div>
+                    <ul id="listing"></ul>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script type="text/template" id="picture-template">
+        <span class="list-header"> <%= Name %> (<%= type %>)</span>
+        <div class="details">
+            Description:
+            <%=description %>
+                <br/> Director:
+                <%=moviename %>
+                    <br/> Imdb Rating:
+                    <%=ImdbRating %>
+                        <br/>
+
+        </div>
+    </script>
+
+    <script src="js/data.json" type="text/javascript"></script>
+
+    <script src="js/libs/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/libs/underscore-min.js" type="text/javascript"></script>
+    <script src="js/libs/backbone-min.js" type="text/javascript"></script>
+
+    <script src="js/routers/router.js" type="text/javascript"></script>
+    <script src="js/models/picture-model.js" type="text/javascript"></script>
+    <script src="js/views/picture-views.js" type="text/javascript"></script>
+
+    <script src="js/app.js" type="text/javascript"></script>
+
+    <footer class="row-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a>
+                        </li>
+                        <li><a href="#">About</a>
+                        </li>
+                        <li><a href="#">Menu</a>
+                        </li>
+                        <li><a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                     3071, White Ash Trail<br>
+                     Orlando<br>
+                     Florida<br>
+                     <i class="fa fa-phone"></i>: +3213103620<br>
+                     <i class="fa fa-fax"></i>: +3213103620<br>
+                     <i class="fa fa-envelope"></i>: 
+                     <a href="mailto:confusion@food.net">rohan.rajput4@gmail.com</a>
+                  </address>
+                </div>
+                <div class="nav navbar-nav" style="padding: 40px 10px;">
+                    <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                    <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                    <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+
+            $("#reservation-link").click(function() {
+                $("#reservation-modal").modal('show');
+            });
+
+            $("#login-link").click(function() {
+                $("#login-modal").modal('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

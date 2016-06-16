@@ -1,0 +1,87 @@
+directoryData = [
+	{
+		"ID": "1",
+		"Name": "IronMan",
+		"moviename": " Jon Favreau",
+		"description": "After being held captive in an Afghan cave, a billionaire engineer creates a unique weaponized suit of armor to fight evil.",
+		"ImdbRating": "7.9",
+		"RatedR": "yes"
+	},
+	{
+		"ID": "2",
+		"Name": "Kung Fu Panda 3",
+		"moviename": " Alessandro Carloni",
+		"description": "Continuing his legendary adventures of awesomeness, Po must face two hugely epic, but different threats: one supernatural and the other a little closer to his home",
+		"ImdbRating": "7.3",
+		"RatedR": "no"
+	},
+	{
+		"ID": "3",
+		"Name": "Deadpool",
+		"moviename": "  Tim Miller",
+		"description": "A former Special Forces operative turned mercenary is subjected to a rogue experiment that leaves him with accelerated healing powers, adopting the alter ego Deadpool.",
+		"ImdbRating": "8.2",
+		"RatedR": "yes"
+	},
+	{
+		
+		"ID": "4",
+		"Name": "The Dark Knight",
+		"moviename": "Christopher Nolan",
+		"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+		"ImdbRating": "9.0",
+		"RatedR": "yes"
+	},
+	{
+		"ID": "5",
+		"Name": "Fifty Shades of Grey",
+		"moviename": " Sam Taylor-Johnson",
+		"description": "Literature student Anastasia Steele's life changes forever when she meets handsome, yet tormented, billionaire Christian Grey",
+		"ImdbRating": "4.1",
+		"RatedR": "yes"
+	},
+	{
+		"ID": "6",
+		"Name": "Finding Nemo",
+		"moviename": " Andrew Stanton",
+		"description": "After his son is captured in the Great Barrier Reef and taken to Sydney, a timid clownfish sets out on a journey to bring him home.",
+		"ImdbRating": "8.1",
+		"RatedR": "no"
+	},
+	{
+		"ID": "7",
+		"Name": "The Social Network",
+		"moviename": "David Fincher",
+		"description": "Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, but is later sued by two brothers who claimed he stole their idea, and the co-founder who was later squeezed out of the business.",
+		"ImdbRating": "7.7",
+		"RatedR": "no"
+	},
+	{
+		"ID": "8",
+		"Name": "The Conjuring",
+		"moviename": "James Wan",
+		"description": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.",
+		"ImdbRating": "7.5",
+		"RatedR": "yes"
+	},
+	{
+       "ID": "9",
+		"Name": "Harry Potter and the Sorcerer's Stone",
+		"moviename": "Chris Columbus",
+		"description": "Rescued from the outrageous neglect of his aunt and uncle, a young boy with a great destiny proves his worth while attending Hogwarts School of Witchcraft and Wizardry.",
+		"ImdbRating": "7.5",
+		"RatedR": "no"
+	},
+	{
+		
+       "ID": "10",
+		"Name": "Avengers: Age of Ultron",
+		"moviename": " Joss Whedon",
+		"description": "When Tony Stark and Bruce Banner try to jump-start a dormant peacekeeping program called Ultron, things go horribly wrong and it's up to Earth's Mightiest Heroes to stop the villainous Ultron from enacting his terrible plans..",
+		"ImdbRating": "7.5",
+		"RatedR": "no"
+	}
+
+
+
+]
